@@ -1,0 +1,18 @@
+import wollok.game.*
+import bomberman.*
+import objetos.*
+
+program bomberman {
+	//  CONFIG	
+	game.title("Bomberman")
+	game.height(50)
+	game.width(50)
+	game.ground("fondo2.jpg")
+
+	//  VISUALES
+ 	game.addVisualCharacter(bomberman)
+
+ 	// TECLADO
+ 	keyboard.b().onPressDo( { bomberman.poner(new Bomba()) })
+ 	//  COMIENZA
+	game.start()
